@@ -1,0 +1,8 @@
+programa {
+funcao inicio() {
+inteiro idade
+    escreva("Qual é sua idade?\n")
+    leia(idade)
+  }
+}
+Atividade 2
