@@ -1,0 +1,21 @@
+programa {
+  inclua biblioteca Matematica --> mat
+  funcao inicio() {
+  inteiro x, y, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6, i
+
+   escreva("Digite dois números:\n ")
+   leia(x, y)
+   
+resultado1 = x + y
+resultado2 = x - y
+resultado3 = x / y
+resultado4 = x * y
+  escreva("O resultado da soma é:\n ", resultado1, "!\n")
+  escreva("O resultado da subtração é:\n ", resultado2, "!\n")
+  escreva("O resultado da divisão é: \n", resultado3, "!\n")
+  escreva("O resultado  da multiplicação é: \n ", resultado4, "!\n")
+  escreva("O resultado de ", x, " elevado a ", y, " é: \n", mat.potencia (x, y), "\n")
+  escreva("O resto de X e Y é:\n ", x % y, "\n" )
+  }
+}
+Atividade 12
