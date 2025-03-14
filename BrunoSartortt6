@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+    inteiro x
+    inteiro resultado_1
+    inteiro resultado_2
+escreva("Digite um número:\n")
+leia(x)
+resultado_1 = x - 1
+resultado_2 = x + 1
+escreva("O antecessor do seu número é ", resultado_1, ", e o sucessor do seu número é ", resultado_2, "!")
+  }
+}
+Atividade 6
