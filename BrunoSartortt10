@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+   real valor, final
+
+   escreva("Digite o valor investido:\n ")
+   leia(valor)
+   
+   final = valor + (valor * 0.05 * 3)
+   
+   escreva("Valor final após 3 anos:\n ", final)
+  }
+}
+Atividade 10
