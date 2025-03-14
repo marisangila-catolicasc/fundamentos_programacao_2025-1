@@ -1,0 +1,15 @@
+programa {
+  const real PI = 3.14159
+  funcao inicio() {
+  real raio, altura
+  real resultado
+escreva("Para calcular o volume da lata, diga-me o raio da lata:\n")
+ leia(raio)
+escreva("Agora diga-me a altura da lata:\n")
+leia(altura)
+resultado = PI * raio * altura
+escreva("O volume da lata é: ", resultado, ".\n")
+
+  }
+}
+Atividade 8
