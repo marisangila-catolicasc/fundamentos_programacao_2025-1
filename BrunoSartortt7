@@ -1,0 +1,16 @@
+programa {
+    funcao inicio() {
+    real x
+    inteiro y
+    inteiro resultado
+escreva("Digite o valor do dólar hoje:\n")
+ leia(x)
+ x = x
+escreva("Digite quantos dólares você quer comprar:\n")
+ leia(y)
+ y = y
+resultado = x * y
+escreva("Você precisa de ", resultado, " reais para comprar ", y, " dólares." )
+  }
+}
+Atividade 7
