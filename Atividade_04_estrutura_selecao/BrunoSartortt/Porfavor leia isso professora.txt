@@ -1,2 +1,0 @@
-Tive umas complicações com meu Vs Code, alterei algumas configurações para usar acentuação nas palavras, e, dentre um outro problema que não identifiquei ao certo, acabei tendo que utilizar um compilador e executador que creio
-serem um pouco diferente dos que a professora passou, ao que me lembro. Tem uma explicação melhor em uma anotação dentro do código do arquivo "1_BrunoSartortt".
