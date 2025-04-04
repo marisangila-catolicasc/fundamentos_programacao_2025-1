@@ -7,11 +7,11 @@ int main() {
     printf("Digite 1 numero\n");
     scanf("%d",&num2);
     if(num1>num2){
-        printf("O numero é %d maior que o numero %d",num1, num2);
+        printf("O numero e %d maior que o numero %d",num1, num2);
     }else if (num2>num1){
-        printf("O numero é %d maior que o numero %d",num2, num1);
+        printf("O numero e %d maior que o numero %d",num2, num1);
     }else{
-        printf("Os numeros são iguais");
+        printf("Os numeros sao iguais");
     }
     return 0;
 }
