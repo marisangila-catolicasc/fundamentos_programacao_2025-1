@@ -5,9 +5,9 @@ int main() {
     printf("Digite a sua idade\n");
     scanf("%d",&idade);
     if(18>idade){
-        printf("Não eleitor\n");
+        printf("Nao eleitor\n");
     }else if (idade>=18&&idade<=65){
-        printf("Eleitor obrigatório\n");
+        printf("Eleitor obrigatorio\n");
     }else{
         printf("Eleitor facultativo\n");
     }
