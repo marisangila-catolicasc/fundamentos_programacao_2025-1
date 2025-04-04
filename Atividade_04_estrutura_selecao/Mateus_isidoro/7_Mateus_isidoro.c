@@ -10,13 +10,13 @@ int main() {
     scanf("%f",&comp3);
     if(comp1>0 && comp2>0 && comp2>0){
       if(comp1 == comp2 && comp1 == comp3){
-        printf("O triangulo é Equilátero");
+        printf("O triangulo e Equilátero");
       }else if(comp1 != comp2 && comp1 != comp3){
-        printf("O triangulo é Escaleno");
+        printf("O triangulo e Escaleno");
       }else if(comp1 == comp2 || comp1 == comp3 || comp3 == comp2){
-        printf("O triangulo é Isósceles");
+        printf("O triangulo e Isósceles");
       }}else{
-      printf("Não é o comprimento de um triangulo");
+      printf("Nao é o comprimento de um triangulo");
     }
     return 0;
 }
