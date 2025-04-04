@@ -9,13 +9,13 @@ int main() {
     printf("Digite 1 numero\n");
     scanf("%d",&num3);
     if(num1>num2&&num1>num3){
-        printf("O %d é o maior numero",num1);
+        printf("O %d e o maior numero",num1);
     }else if (num2>num1&&num2>num3){
-      printf("O %d é o maior numero",num2);
+      printf("O %d e o maior numero",num2);
     }else if (num3>num1&&num3>num2){
-      printf("O %d é o maior numero",num3);
+      printf("O %d e o maior numero",num3);
     }else{
-        printf("Os numeros são iguais ou tem dois numeros iguais");
+        printf("Os numeros sao iguais ou tem dois numeros iguais");
     }
     return 0;
 }
