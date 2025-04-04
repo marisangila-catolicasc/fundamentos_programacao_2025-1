@@ -41,21 +41,21 @@ int main() {
   case 7:
   case 8:
     printf("Região sul!!!");
-    return 0;
+    break;
 
   case 2:
   case 3:
   case 4:
   case 5:
     printf("Região sudeste!!!");
-    return 0;
+    break;
 
   case 1:
   case 18:
   case 25:
   case 26:
     printf("Região centro-oeste!!!");
-    return 0;
+    break;
 
   case 19:
   case 20:
@@ -65,7 +65,7 @@ int main() {
   case 24:
   case 27:
     printf("Região norte!!!");
-    return 0;
+    break;
 
   case 9:
   case 10:
@@ -77,7 +77,7 @@ int main() {
   case 16:
   case 17:
     printf("Região Nordeste!!!");
-    return 0;
+    break;
 
   default:
     printf("Opção inválida!\n");
