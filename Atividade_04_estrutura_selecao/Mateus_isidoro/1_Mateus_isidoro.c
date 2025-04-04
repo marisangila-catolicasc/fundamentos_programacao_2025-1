@@ -5,9 +5,9 @@ int main() {
     printf("Escolha um numero positivo ou negativo\n");
     scanf("%d", &numero);
     if(numero >= 0){
-        printf("É positivo");
+        printf("E positivo");
     }else{
-        printf("É negativo");
+        printf("E negativo");
     }
     return 0;
 }
