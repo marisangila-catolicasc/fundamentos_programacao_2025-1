@@ -21,12 +21,12 @@ int main() {
   {
     case '+':
       resultado = n1 + n2;
-      printf("O resultado é: %.2f\n", resultado);
+      printf("%.2f + %.2f = %.2f\n", n1, n2, resultado);
       break;
 
     case '-':
       resultado = n1 - n2;
-      printf("O resultado é: %.2f\n", resultado);
+      printf("%.2f - %.2f = %.2f\n", n1, n2, resultado);
       break;
 
     case '/':
@@ -36,13 +36,13 @@ int main() {
         
       else {
         resultado = n1 / n2;
-        printf("O resultado é: %.2f\n", resultado);
+        printf("%.2f / %.2f = %.2f\n", n1, n2, resultado);
       }
       break;
 
     case '*':
       resultado = n1 * n2;
-      printf("O resultado é: %.2f\n", resultado);
+      printf("%.2f * %.2f = %.2f\n", n1, n2, resultado);
       break;
 
     default:
