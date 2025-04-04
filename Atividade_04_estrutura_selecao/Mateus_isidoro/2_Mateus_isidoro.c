@@ -5,9 +5,9 @@ int main() {
     printf("Escolha um numero\n");
     scanf("%d", &numero);
     if(numero%2 == 0){
-        printf("É par");
+        printf("E par");
     }else{
-        printf("É impar");
+        printf("E impar");
     }
     return 0;
 }
