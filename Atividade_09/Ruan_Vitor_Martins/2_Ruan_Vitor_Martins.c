@@ -13,11 +13,11 @@ int main() {
   printf("qual linha voce quer ver? [1][2][3]");
   scanf("%d", &linha);
 
-  if (linha = 1) {
+  if (linha == 1) {
     printf("[%d] [%d] [%d]", matriz[0][0], matriz[0][1], matriz[0][2]);
-  } else if (linha = 2) {
+  } else if (linha == 2) {
     printf("[%d] [%d] [%d]", matriz[1][0], matriz[1][1], matriz[1][2]);
-  } else if (linha = 3)
+  } else if (linha == 3)
     printf("[%d] [%d] [%d]", matriz[2][0], matriz[2][1], matriz[2][2]);
   else
     printf("ta errado isso ai mano");
