@@ -1,0 +1,2 @@
+#include <stdio.h>
+void meu_strcat(char destino[], char origem[]) { int i = 0, j = 0; while (destino[i] != '\0') { i++; } while (origem[j] != '\0') { destino[i] = origem[j]; i++; j++; } destino[i] = '\0'; }
