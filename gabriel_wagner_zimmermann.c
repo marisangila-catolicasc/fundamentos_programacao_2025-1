@@ -105,7 +105,7 @@ void Intro() {
     printf(">> Sua opcao: ");
 }
 
-// Funcao principal
+
 int main() {
     int opcaoComeco = 0;
 
