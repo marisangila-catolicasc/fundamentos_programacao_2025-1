@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// quero agradecer ao gabriel vinicios, estudei a logica do cod dele e tbm usei esse video "https://youtu.be/mhlar-crjUE" para fazer o jogo
 // Função que processa a jogada, verifica vitória e empate
 int processarJogada(char tabuleiro[3][3], int linha, int coluna, char jogador) {
     if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2) {
