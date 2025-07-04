@@ -5,6 +5,10 @@
 #define LINHA 3
 #define COLUNA 3
 
+// me inspirei em dois videos do youtube e pesquisei no reddit algumas coisas
+//https://youtu.be/mhlar-crjUE?si=uUsY2zWI_sYjdtBV
+//https://youtu.be/WPVrj4CyCvM?si=bMc6_G9XzzmcEGP7
+
 void inicializarTabuleiro(char matriz[LINHA][COLUNA]) {
     for(int i = 0; i < LINHA; i++) {
         for(int j = 0; j < COLUNA; j++) {
