@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int processarJogada(char tabuleiro[3][3], int posicao, char jogador) {
-    if (posicao < 1 || posicao > 9) {   
+    if (posicao < 1 || posicao > 9) {
         return 0;
     }
 
@@ -143,7 +143,11 @@ int main() {
                         getchar();
                     } else {
                         if (resultado == 1) {
-                            jogadorAtual = (jogadorAtual == 'X') ? 'O' : 'X';
+                            if (jogadorAtual == 'X') {
+                                jogadorAtual = 'O';
+                            } else {
+                                jogadorAtual = 'X';
+                            }
                         }
                     }
                 }
@@ -154,8 +158,15 @@ int main() {
                 printf("=== RESULTADO FINAL ===\n");
                 tabuleiro_principal(tabuleiro);
 
+                char vencedor;
+                if (jogadorAtual == 'X') {
+                    vencedor = 'O';
+                } else {
+                    vencedor = 'X';
+                }
+
                 if (resultado == 2) {
-                    printf("PARABENS! O jogador %c venceu!\n", jogadorAtual);
+                    printf("PARABENS! O jogador %c venceu!\n", vencedor);
                 } else {
                     printf("Deu velha! Ninguem venceu.\n");
                 }
