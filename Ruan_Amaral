@@ -35,7 +35,14 @@ int main() {
     while (jogadas_feitas < 9) {
         imprimir_tabuleiro();
         printf("Jogador %c, escolha uma posição (0-8): ", jogador_atual);
-        scanf("%d", &posicao_escolhida);
+
+        int resultado = scanf("%d", &posicao_escolhida);
+
+        if (resultado != 1) {
+            printf("Entrada inválida! Use apenas números de 0 a 8.\n");
+            while (getchar() != '\n');
+            continue;
+        }
 
         if (posicao_escolhida < 0 || posicao_escolhida > 8 || tabuleiro[posicao_escolhida] != ' ') {
             printf("Posição inválida! Tente novamente.\n");
@@ -53,6 +60,11 @@ int main() {
 
         jogador_atual = (jogador_atual == 'X') ? 'O' : 'X';
     }
+
+    imprimir_tabuleiro();
+    printf("Empate! Nenhum jogador venceu.\n");
+    return 0;
+}
 
     imprimir_tabuleiro();
     printf("Empate! Nenhum jogador venceu.\n");
