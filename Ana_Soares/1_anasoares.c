@@ -70,7 +70,7 @@ int main() {
     int linha, coluna;
     int jogador; 
     char simboloAtual; 
-    int ganhou;
+    
     char resposta[10]; 
     char mensagem[100] = ""; 
 
@@ -85,7 +85,7 @@ int main() {
     while(1) {
         inicializarTabuleiro(matriz);
         jogador = 1;
-        ganhou = 0;
+        
 
         while(1) {
             system("cls || clear");
@@ -136,7 +136,7 @@ int main() {
                 printf("JOGO DA VELHA\n");
                 exibirTabuleiro(matriz);
                 printf("Parabéns! Jogador %d (%c) venceu!\n", jogador, simboloAtual);
-                ganhou = 1;
+                
                 break; 
             }
 
