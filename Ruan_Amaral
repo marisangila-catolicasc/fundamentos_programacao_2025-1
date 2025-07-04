@@ -7,9 +7,9 @@ int posicao_escolhida;
 
 int verificar_vitoria(char jogador) {
     int combinacoes[8][3] = {
-        {0,1,2}, {3,4,5}, {6,7,8}, // l
-        {0,3,6}, {1,4,7}, {2,5,8}, // c
-        {0,4,8}, {2,4,6}           // d
+        {0,1,2}, {3,4,5}, {6,7,8}, // linhas
+        {0,3,6}, {1,4,7}, {2,5,8}, // colunas
+        {0,4,8}, {2,4,6}           // diagonais
     };
 
     for (int i = 0; i < 8; i++) {
@@ -34,14 +34,22 @@ void imprimir_tabuleiro() {
 int main() {
     while (jogadas_feitas < 9) {
         imprimir_tabuleiro();
-        printf("Jogador %c, escolha uma posição (0-8): ", jogador_atual);
+        printf("Jogador %c, escolha uma posição (0-8) ou 'q' para sair: ", jogador_atual);
+
+        char caractere_entrada = getchar();
+        if (caractere_entrada == 'q' || caractere_entrada == 'Q') {
+            printf("Jogo encerrado pelo usuário.\n");
+            return 0;
+        }
+
+        ungetc(caractere_entrada, stdin);
 
         int lixo;
-        int resultado = scanf("%d%c", &posicao_escolhida, &lixo);
+        int resultado_leitura = scanf("%d%c", &posicao_escolhida, &lixo);
 
-        if (resultado != 2 || lixo != '\n') {
+        if (resultado_leitura != 2 || lixo != '\n') {
             printf("Entrada inválida! Use apenas números inteiros de 0 a 8.\n");
-            while (getchar() != '\n');
+            while (getchar() != '\n'); // limpa o buffer
             continue;
         }
 
