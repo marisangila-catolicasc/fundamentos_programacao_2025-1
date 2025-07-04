@@ -34,12 +34,13 @@ int conferevitoria(){
         ){
       printf("Vitória do jogador %c\n", jogador);
       vitoria = 0;
-    }else if((jogodavelha[0][0] == jogodavelha[1][1] && jogodavelha[1][1] == jogodavelha[2][2] && jogodavelha[0][0] != ' ')||
+    }
+  }
+  if((jogodavelha[0][0] == jogodavelha[1][1] && jogodavelha[1][1] == jogodavelha[2][2] && jogodavelha[0][0] != ' ')||
         (jogodavelha[0][2] == jogodavelha[1][1] && jogodavelha[1][1] == jogodavelha[2][0] && jogodavelha[0][2] != ' ')){
       printf("Vitória do jogador %c\n", jogador);
       vitoria = 0;
     }
-  }
   return vitoria;
 }
 
@@ -53,7 +54,6 @@ int jogadas(){
     scanf("%d", &i);
     printf("Digite a coluna da jogada: ");
     scanf("%d", &j);
-    qtd_jogadas++;
     if (i > 3 || j > 3 || i < 1 || j < 1){
       printf("Jogada invalida!\n");
       continue;
@@ -62,6 +62,7 @@ int jogadas(){
       jogodavelha[i-1][j-1] = jogador;
       mostrajogo();
       conferevitoria();
+      qtd_jogadas++;
       if (vitoria == 0){
         break;
       }
