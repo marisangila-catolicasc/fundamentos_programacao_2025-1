@@ -45,7 +45,7 @@ int main() {
         ungetc(caractere_entrada, stdin);
 
         int resultado_leitura = scanf("%d", &posicao_escolhida);
-        while (getchar() != '\n'); // limpa o buffer até o final da linha
+        while (getchar() != '\n'); 
 
         if (resultado_leitura != 1) {
             printf("Entrada inválida! Use apenas números inteiros de 0 a 8.\n");
