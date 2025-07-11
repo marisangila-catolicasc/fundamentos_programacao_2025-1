@@ -170,6 +170,7 @@ int main()
         } else if (repetir == 3)
         {
             printf("\nEmpatou!\n");
+            mostrarTabuleiro(tabuleiro);
             repetir = 0;
         }
         
