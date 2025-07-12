@@ -1,0 +1,130 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+char tab[3][3];
+char jogador_atual;
+
+void incTAB();
+
+void exibTAB();
+
+int jogadaValida(int i, int j);
+
+int verifVencedor();
+
+int verifEmpate();
+
+void realizJogada(int i, int j);
+
+void trocarJogador();
+
+
+int main(){
+    setlocale(LC_ALL,"Portuguese");
+    int l, c;
+    jogador_atual = 'X';
+    incTAB();
+    fflush(stdout);
+
+    while(1){
+        exibTAB();
+        printf("\nPara sair do jogo, digite -1\n");
+        printf("\nJogador %c, informe a linha e coluna da jogada (0 à 2):\n", jogador_atual);
+        scanf("%d %d", &l, &c);
+
+
+        if(l == -1 || c == -1){
+            printf("Jogo encerrado pelo jogador %c.\n", jogador_atual);
+            break;
+        }
+
+        if(!jogadaValida(l,c)){
+            printf("Jogada inválida. Tente novamente!\n");
+            continue;
+        }
+
+    realizJogada(l,c);
+        if(verifVencedor()){
+            exibTAB();
+            printf("Parabéns!! O jogador %c venceu o jogo!!\n", jogador_atual);
+            break;
+        }
+
+        if(verifEmpate()){
+            exibTAB();
+            printf("Deu velha!! O jogo terminou empatado!\n");
+            break;
+        }
+
+    trocarJogador();
+
+
+    }
+
+    return 0;
+}
+
+
+void incTAB(){
+    int i, j;
+    for(i=0; i<3; i++){
+        for (j=0; j<3; j++){
+            tab[i][j] = ' ';
+        }
+    }
+}
+
+void exibTAB(){
+    printf("   0    1     2\n");
+    printf("  --------------\n");
+    printf("0  %c  | %c  | %c\n", tab[0][0], tab[0][1], tab[0][2]);
+    printf("  ---- ---- ----\n");
+    printf("1  %c  | %c  | %c\n", tab[1][0], tab[1][1], tab[1][2]);
+    printf("  ---- ---- ----\n");
+    printf("2  %c  | %c  | %c\n", tab[2][0], tab[2][1], tab[2][2]);
+}
+
+int jogadaValida(int i, int j){
+    if(i<0||i>2||j<0||j>2){
+        return 0;
+    }
+    if(tab[i][j] != ' '){
+        return 0;
+    }
+    return 1;
+}
+
+int verifVencedor(){
+    int i, j;
+    for(i=0;i<3;i++){
+        if(tab[i][0] == jogador_atual && tab[i][1] == jogador_atual && tab[i][2] == jogador_atual)
+            return 1;
+        if(tab[0][i] == jogador_atual && tab[1][i] == jogador_atual && tab[2][i] == jogador_atual)
+            return 1;
+    }
+        if(tab[0][0] == jogador_atual && tab[1][1] == jogador_atual && tab[2][2] == jogador_atual)
+                return 1;
+        if(tab[0][2] == jogador_atual && tab[1][1] == jogador_atual && tab[2][0] == jogador_atual)
+                return 1;
+        return 0;
+}
+
+int verifEmpate(){
+    int i, j;
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            if(tab[i][j] == ' ')
+                return 0;
+            }
+        }
+        return 1;
+}
+
+void realizJogada(int i, int j){
+        tab[i][j] = jogador_atual;
+}
+
+void trocarJogador(){
+    jogador_atual = (jogador_atual == 'X') ? 'O' : 'X';
+}
