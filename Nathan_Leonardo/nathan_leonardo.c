@@ -35,9 +35,9 @@ int main() {
                 break; 
             }
             if (jogadorAtual == 'X'){
-                jogadorAtual == 'O';
+                jogadorAtual = 'O';
             }else{
-                (jogadorAtual == 'X');
+                (jogadorAtual = 'X');
             }  
         }
     }
