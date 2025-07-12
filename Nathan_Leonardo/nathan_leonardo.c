@@ -34,7 +34,11 @@ int main() {
                 printf("O jogo terminou em empate!\n");
                 break; 
             }
-            jogadorAtual = (jogadorAtual == 'X') ? 'O' : 'X';
+            if (jogadorAtual == 'X'){
+                jogadorAtual == 'O';
+            }else{
+                (jogadorAtual == 'X');
+            }  
         }
     }
 
