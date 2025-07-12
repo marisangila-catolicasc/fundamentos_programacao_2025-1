@@ -77,12 +77,7 @@ void limpar() {
     #else
         system("clear");
     #endif
-
-    for (int i = 0; i < 0; i++) {
-        printf("\n");
     }
-}
-
 void comeco() {
     limpar();
     
